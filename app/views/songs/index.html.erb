@@ -2,12 +2,16 @@
 
 <%= link_to 'Create Song', new_song_path, method: :get %> <br><br><br>
 
+<tbody>
 <% @songs.each do |song| %>
-    <%= song.title %> <br>
-    <%= song.release_year %> <br>
-    <%= song.genre %> <br>
-    <%= song.artist_name %> <br>
+<tr>
+    <td><%= song.title %> <br></td>
+    <td><%= song.release_year %> <br></td>
+    <td><%= song.genre %> <br></td>
+    <td><%= song.artist_name %> <br></td>
     <%= link_to 'View', song_path(song), method: :get %> <br>
     <%= link_to 'Edit', edit_song_path(song), method: :get %> <br>
     <%= link_to 'Delete', song_path(song), method: :delete %> <br><br><br>
+</tr>
 <% end %>
+</tbody>

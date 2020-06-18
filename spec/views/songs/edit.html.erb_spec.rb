@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe 'songs/edit', type: :feature do
   let(:song_attributes) do
     {
@@ -8,7 +10,7 @@ RSpec.describe 'songs/edit', type: :feature do
       artist_name: 'Man With Instruments'
     }
   end
-
+  
   let(:song) { Song.create!(song_attributes) }
 
   it 'renders the edit song form' do
